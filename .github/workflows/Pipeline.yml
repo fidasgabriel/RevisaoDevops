@@ -34,7 +34,7 @@ jobs:
             cd src
             javac -cp . Main.java 
     - uses: mr-smithers-excellent/docker-build-push@v6
-      name: Deploy DockerHub
+      name: Deploy DockerHub Imagem
       with:     
            image: fidasgabriel/aula_revisao
            tags: ${{ github.run_number }}
