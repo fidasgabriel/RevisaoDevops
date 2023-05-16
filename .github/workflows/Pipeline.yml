@@ -21,11 +21,15 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Compilando
+    - name: Compilando Teste
+      run: |
+            cd src
+            javac -cp . Teste.java 
+    - name: Executando Teste
+      run: |
+            cd src
+            java -cp . Teste
+    - name: Compilando Main
       run: |
             cd src
             javac -cp . Main.java 
-    - name: Executando
-      run: |
-            cd src
-            java -cp . Main
